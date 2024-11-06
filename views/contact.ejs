@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('/images/Background Image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 10px 30px; /* Adjusted padding for a subtle look */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent; /* Make the background transparent */
+    }
+
+    .logo {
+        font-size: 24px;
+        color: white; /* Keep the logo color */
+    }
+
+    .logo a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white; /* Keep the link color */
+        font-size: 18px;
+    }
+
+    .content {
+        text-align: center;
+        margin-top: 20px;
+        color: black;
+    }
+
+    .form-container {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    footer {
+        margin-top: auto;
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <a href="/">Ahmed A</a> <!-- Making Ahmed A clickable -->
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/about"><i class="fas fa-user"></i> About Me</a></li>
+        <li><a href="/projects"><i class="fas fa-folder"></i> Projects</a></li>
+        <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="content">
+    <h1>Contact Me</h1>
+    <div class="form-container">
+      <form action="/submit" method="POST" onsubmit="return resetForm(event)">
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="lastName" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone">
+        <textarea name="comments" placeholder="Comments" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Copyright 2024. All Rights reserved.</p>
+  </footer>
+</body>
+</html>
